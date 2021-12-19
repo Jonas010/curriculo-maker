@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu curriculo</title>
+    <link rel="stylesheet" href="../css/curriculo.css">
+    
+</head>
+<body>
+
+    <main id="content">
+        <!-- Area das informações basicas -->
+        <div class="header">
+            <h1 id="nome">nome</h1><br>
+            <p id="area_trabalho">area de trabalho</p><br>
+            <p id="contato">contato</p>
+        </div>
+        <!-- o resto das informações -->
+        <div class="body">
+            <h2 id="habilidade_resumo">resumo de habilidades</h2><br>
+            <h3 id="habilidade">habilidade</h3>
+            <ul>
+                <li id="about_skill">sobre habilidade</li>
+            </ul><br>
+
+            <h2 id="experiencia">experiencia</h2><br>
+
+            <div id="div_exp">
+                <h3 id="tempo_exp">tempo</h3>
+                <div>
+                    <h3 id="exp_area">area de experiencia</h3>
+                    <p id="empresa_exp">empresa que trabalhou</p>
+                    <ul>
+                        <li id="sobre_exp">sobre a area de experiencia</li>
+                    </ul>
+                </div>
+            </div><br>
+
+            <h2 id="educacao">educacao</h2><br>
+            <div id="div_edu">
+                <div>
+                    <h3 id="tempo_edu">tempo de educacao</h3>
+                </div>
+                <div>
+                    <h3 id="sobre_edu">em que se educou</h3>
+                    <p id="onde_edu">onde se educou</p>
+                </div>
+            </div>
+        </div>
+    </main><br>
+
+    <hr> <br><br>
+
+    <button id="btn" onclick="print()">Salvar em pdf</button>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/curriculo_script.js"></script>
+</body>
+</html>

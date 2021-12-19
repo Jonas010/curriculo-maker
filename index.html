@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de informações</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="popup">
+        <a id="close" href="javascript:;">X</a>
+        <h3>Não deixe inputs vazios</h3>
+    </div>
+
+    <h1>Formulário</h1>
+    <p>Por favor, preencha o formulário e certifique-se de que está tudo correto.</p><br><br>
+
+    <main>
+        <form>
+            <!-- cabeçalho -->
+            <h3>Informações basicas</h3><br>
+            <input type="text" id="nome" placeholder="Seu nome"><br>
+            <input type="text" id="carreira" placeholder="No que você trabalha?"><br>
+            <input type="text" id="contato" placeholder="Como entrar em contato?"><br><br>
+
+            <!-- area do resumo de habilidade(s) -->
+            <h3>Quais as suas habilidades?</h3><br>
+            <input type="text" id="titulo" placeholder="Sua(s) habilidade(s)"><br>
+            <input type="text" id="sobreHabilidade" placeholder="Dê mais detalhes sobre"><br><br>
+
+            <!-- area para falar sobre a experiencia -->
+            <h3>Sobre as suas experiências</h3><br>
+            <input type="text" id="tempoArea" placeholder="tempo atuado na área?"><br>
+            <input type="text" id="areaDeTrabalho" placeholder="Qual a área de trabalha"><br>
+            <input type="text" id="empresaExp" placeholder="Empresa que você trabalhou?"><br><br>
+
+            <!-- area para falar sobre a educação -->
+            <h3>Fale um pouco sobre sua educação(curso/estudo)</h3><br>
+            <input type="text" id="tempoEdu" placeholder="Quanto tempo durou?"><br>
+            <input type="text" id="nomeCurso" placeholder="Curso em que se graduou"><br>
+            <input type="text" id="nomeInstituicao" placeholder="Nome da instituição"><br>
+
+        </form>
+
+        <div class="buttons">
+            <button onclick="salvar()">Salvar</button>
+            <button onclick="visualizar()">Visializar</button>
+        </div>
+
+        <script src="./js/index.js"></script>
+    </main>
+    
+</body>
+</html>

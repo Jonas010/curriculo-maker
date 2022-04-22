@@ -26,6 +26,7 @@ main #div_exp {
 main #div_edu {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 10%;
 }
 
 #btn {

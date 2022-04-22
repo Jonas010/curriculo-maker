@@ -10,10 +10,9 @@
 <body>
     <div class="popup">
         <a id="close" href="javascript:;">X</a>
-        <h3>Não deixe inputs vazios</h3>
+        <h3 id="warning"></h3>
     </div>
 
-    <h1>Formulário</h1>
     <p>Por favor, preencha o formulário e certifique-se de que está tudo correto.</p><br><br>
 
     <main>
@@ -22,8 +21,19 @@
             <h3>Informações basicas</h3><br>
             <input type="text" id="nome" placeholder="Seu nome"><br>
             <input type="text" id="carreira" placeholder="No que você trabalha?"><br>
-            <input type="text" id="contato" placeholder="Como entrar em contato?"><br><br>
+            
+            <label for="contato_opt">Escolha uma forma de entrar em contato:</label>
+            <select name="contato_opt" id="cntt_opt">
+                <option value="whatsapp">Whatsapp</option>
+                <option value="email">email</option>
+                <option value="telefone">Telefone</option>
+                <option value="telegram">Telegram</option>
+            </select>
+            <input type="text" id="contato" placeholder="Como entrar em contato?">
+        </form>
+        <button onclick="add()">Add</button>
 
+        <form>
             <!-- area do resumo de habilidade(s) -->
             <h3>Quais as suas habilidades?</h3><br>
             <input type="text" id="titulo" placeholder="Sua(s) habilidade(s)"><br>
@@ -45,7 +55,7 @@
 
         <div class="buttons">
             <button onclick="salvar()">Salvar</button>
-            <button onclick="visualizar()">Visializar</button>
+            <button onclick="visualizar()">Visualizar</button>
         </div>
 
         <script src="./js/index.js"></script>

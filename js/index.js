@@ -14,6 +14,35 @@ let curso = document.querySelector("#nomeCurso");
 let instituicao = document.querySelector("#nomeInstituicao");
 
 const popup = document.querySelector('.popup');
+let popupInfo = document.querySelector('#warning');
+
+
+
+function add() {
+    let select = document.getElementById("cntt_opt");
+    let value = select.options[select.selectedIndex];
+
+    let dados = {"info1": value.value , "info2": contato.value };
+
+    var ls = localStorage.getItem("contato");
+
+    if(ls){
+        
+        var json = JSON.parse(ls);
+        
+        json.push(dados);
+        
+        json = JSON.stringify(json);
+
+        localStorage.setItem("contato", json);
+    }else{
+        localStorage.setItem("contato", JSON.stringify([dados]));
+    }
+
+    popup.style.top = "60px";
+    popupInfo.innerHTML= `adicionado ao banco: ${value.value} e ${contato.value}`;
+
+}
 
 function salvar() {
 
@@ -36,12 +65,13 @@ function salvar() {
     function verifica_input(items) {
 
         if (items.value == "") {
-           popup.style.top = "60px";
+            popup.style.top = "60px";
+           popupInfo.innerHTML="Não deixe inputs vazios.";
         } else {
            //head
             localStorage.setItem("nome", nome.value );
             localStorage.setItem("trabalho", carreira.value );
-            localStorage.setItem("contato", contato.value );
+            //localStorage.setItem("contato", contato.value );
             //skill
             localStorage.setItem("habilidade", habilidade.value );
             localStorage.setItem("sobreHabilidade", sobreHabilidade.value );
@@ -53,6 +83,9 @@ function salvar() {
             localStorage.setItem("tempoEdu", tempoEdu.value );
             localStorage.setItem("curso", curso.value );
             localStorage.setItem("instituicao", instituicao.value );
+
+            popup.style.top="60px";
+            popupInfo.innerHTML="Salvo com sucesso! Já pode visualizar.";
         }
     };
 

@@ -22,7 +22,15 @@ function print(){
 window.addEventListener("load",function(){ 
     nome.innerHTML = localStorage.getItem("nome");
     area_trabalho.innerHTML = localStorage.getItem("trabalho");
-    contato.innerHTML = localStorage.getItem("contato");
+    //contato.innerHTML = localStorage.getItem("contato");
+
+    var ls_array = JSON.parse(localStorage.getItem("contato"));
+    var texto = '';
+    for(var item of ls_array){
+        texto += item.info1 + " " + item.info2 + ";  ";
+    }
+    contato.innerHTML = texto;
+
     //habilidades
     habilidade.innerHTML = localStorage.getItem("habilidade");
     aboutSkill.innerHTML = localStorage.getItem("sobreHabilidade");
